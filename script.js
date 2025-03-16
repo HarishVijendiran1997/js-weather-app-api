@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const errorMessage = document.getElementById("error-message");
 
-  const API_KEY = "2cc0505380c69952ae1ed2d7337bc39c";
+
+  const API_KEY = window.API_KEY;
 
   getWeatherBtn.addEventListener("click", async () => {
     const city = cityInput.value.trim();
@@ -37,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const data = await response.json();
-    console.log(data);
     return data;
   }
 
